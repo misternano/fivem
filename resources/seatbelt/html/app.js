@@ -1,4 +1,3 @@
-
 window.addEventListener('message', function (e) {
 	$("#container").stop(false, true);
 	if (e.data.displayWindow == 'true') {
