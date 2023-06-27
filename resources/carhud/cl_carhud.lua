@@ -1,5 +1,4 @@
 -- Cruise Control and Engine Code wrote by TheMrDeivid(https://forum.fivem.net/u/David_Carneiro)
--- SeatBelt code wrote by All_Sor (https://forum.fivem.net/u/all_sor) and IndianaBonesUrMom (https://github.com/IndianaBonesUrMom/fivem-seatbelt)
 -- Heli and Plane HUD wrote and made by TheMrDeivid
 -- Please do not steal or sell this script, if you want to use it or modify it, first of all contact me then just give some type of credit!
 -- ################################### --

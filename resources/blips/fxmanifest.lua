@@ -1,9 +1,11 @@
 fx_version "cerulean"
-games {"gta5"}
+game "gta5"
 
-author "nano <hello@nanos.club>"
+author "nano"
 name "Map Blips"
 description "Map Blips for all the locations."
 version "1.0.0"
 
-client_script {"cl_blips.lua"}
+client_script {
+    "cl_blips.lua"
+}

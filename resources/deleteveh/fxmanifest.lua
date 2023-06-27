@@ -1,10 +1,15 @@
 fx_version "cerulean"
-games {"gta5"}
+game "gta5"
 
-author "nano <hello@nanos.club>"
+author "nano"
 name "Delete Vehicle"
 description "Delete vehicle near player."
 version "1.0.0"
 
-server_script {"sv_deleteveh.lua"}
-client_scripts {"cl_deleteveh.lua"}
+server_script {
+    "sv_deleteveh.lua"
+}
+
+client_scripts {
+    "cl_deleteveh.lua"
+}

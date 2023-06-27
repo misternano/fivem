@@ -1,9 +1,11 @@
 fx_version "cerulean"
-games {"gta5"}
+game "gta5"
 
-author "nano <hello@nanos.club>"
+author "nano"
 name "Attack Stance"
 description "No attack stance on firearm discharge"
 version "1.0.0"
 
-client_script {"cl_attackstance.lua"}
+client_script {
+    "cl_attackstance.lua"
+}

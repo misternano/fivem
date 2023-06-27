@@ -1,9 +1,11 @@
 fx_version "cerulean"
-games {"gta5"}
+game "gta5"
 
-author "nano <hello@nanos.club>"
+author "nano"
 name "Sling"
 description "Sling your firearm to your front."
 version "1.0.0"
 
-client_script {"cl_sling.lua"}
+client_script {
+    "cl_sling.lua"
+}
