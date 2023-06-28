@@ -11,10 +11,10 @@ description "Delete all vehicles from the server."
 version "1.0.0"
 
 server_script {
-    "server.lua"
+    "sv_delallveh.lua"
 }
 
 client_scripts {
-    "client.lua",
+    "cl_delallveh.lua",
     "entityiter.lua"
 }

@@ -1,8 +1,7 @@
-RegisterNetEvent('wk:deleteVehicle')
-
 local distanceToCheck = 5.0
 
-AddEventHandler('wk:deleteVehicle', function()
+RegisterNetEvent('deleteVehicle')
+AddEventHandler('deleteVehicle', function()
     local ped = PlayerPedId()
     if DoesEntityExist(ped) and not IsEntityDead(ped) then
         local pos = GetEntityCoords(ped)
@@ -11,6 +10,7 @@ AddEventHandler('wk:deleteVehicle', function()
             if GetPedInVehicleSeat(vehicle, -1) == ped then
                 SetEntityAsMissionEntity(vehicle, true, true)
                 DeleteVehicle(vehicle)
+                exports["swt_notifications"]:Icon("Deleted vehicle.", "bottom", 2000, "light-green-7", "white", false, "mdi-check")
             end
         else
             local playerPos = GetEntityCoords(ped)
@@ -19,6 +19,7 @@ AddEventHandler('wk:deleteVehicle', function()
             if DoesEntityExist(vehicle) then
                 SetEntityAsMissionEntity(vehicle, true, true)
                 DeleteVehicle(vehicle)
+                exports["swt_notifications"]:Icon("Deleted vehicle.", "bottom", 2000, "light-green-7", "white", false, "mdi-check")
             end
         end
     end

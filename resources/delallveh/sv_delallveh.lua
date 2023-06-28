@@ -1,3 +1,3 @@
-RegisterCommand("delallveh", function(source, args, rawCommand)
+RegisterCommand("delallveh", function(source, args)
     TriggerClientEvent("wld:delallveh", -1)
 end, true)

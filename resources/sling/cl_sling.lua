@@ -84,31 +84,31 @@ function AttachWeapon(attachModel, modelHash, boneNumber, x, y, z, xR, yR, zR, i
         handle = CreateObject(GetHashKey(attachModel), 1.0, 1.0, 1.0, true, true, false)
     }
 
-    if isMelee then
-        x = 0.25
-        y = -0.14
-        z = -0.1
-        xR = 120.0
-        yR = 182.0
-        zR = 92.0
-    end
-    if attachModel == "w_am_jerrycan" then
-        y = -0.2
-        x = -0.005
-        z = 0.0
-        xR = 0.0
-        yR = 90.0
-        zR = 0.0
-    end
-    if attachModel == "w_me_machette_lr" then
-        boneNumber = 11816
-        y = -0.15
-        x = -0.25
-        z = -0.22
-        xR = 0.0
-        yR = 0.0
-        zR = 0.0
-    end
+    -- if isMelee then
+    --     x = 0.25
+    --     y = -0.14
+    --     z = -0.1
+    --     xR = 120.0
+    --     yR = 182.0
+    --     zR = 92.0
+    -- end
+    -- if attachModel == "w_am_jerrycan" then
+    --     y = -0.2
+    --     x = -0.005
+    --     z = 0.0
+    --     xR = 0.0
+    --     yR = 90.0
+    --     zR = 0.0
+    -- end
+    -- if attachModel == "w_me_machette_lr" then
+    --     boneNumber = 11816
+    --     y = -0.15
+    --     x = -0.25
+    --     z = -0.22
+    --     xR = 0.0
+    --     yR = 0.0
+    --     zR = 0.0
+    -- end
     AttachEntityToEntity(attached_weapons[attachModel].handle, GetPlayerPed(-1), bone, x, y, z, xR, yR, zR, 1, 1, 0, 0, 2, 1)
 end
 

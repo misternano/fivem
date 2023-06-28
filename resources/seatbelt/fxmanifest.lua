@@ -7,11 +7,11 @@ description "Seatbelt and seatbelt notification."
 version "v2.0.9"
 
 client_script {
-    "client.lua"
+    "cl_seatbelt.lua"
 }
 
 server_script {
-    "server.lua"
+    "sv_seatbelt.lua"
 }
 
 ui_page {
