@@ -253,16 +253,7 @@ local colorNames = {
     ["242"] = "Anodized Fubuki"
 }
 
-local seatbeltException = {
-    "bike1",
-    "bike2",
-    "blazer",
-    "blazer2",
-    "blazer3",
-    "blazer4",
-    "blazer5",
-    "rcbandito"
-}
+local seatbeltException = {"bike1", "bike2", "blazer", "blazer2", "blazer3", "blazer4", "blazer5", "rcbandito"}
 
 RegisterNetEvent("PlayOnOne")
 AddEventHandler("PlayOnOne", function(soundFile, soundVolume)
@@ -424,7 +415,7 @@ end)
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(3500)
-        if not SeatbeltON and InVehicle and not IsPauseMenuActive() and ShowWindow then
+        if not SeatbeltON and InVehicle and not IsPauseMenuActive() and ShowWindow and ChimesToggle then
             TriggerServerEvent("PlayOnSource", "seatbelt", 0.00)
             local veh = GetVehiclePedIsIn(GetPlayerPed(-1), false)
             local primary, secondary = GetVehicleColours(veh)
@@ -441,7 +432,7 @@ AddEventHandler("GetNoti", function(id, primary)
     local myId = PlayerId()
     local pid = GetPlayerFromServerId(id)
     local color = primary
-    local model = GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(veh)))
+    local model = GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(GetVehiclePedIsIn(pid))))
     if pid ~= myId then
         if GetVehicleClass(veh) == 18 then
             if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(pid)), GetEntityCoords(GetPlayerPed(myId)), true) < 19.999 then
